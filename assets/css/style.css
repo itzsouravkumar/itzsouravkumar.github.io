@@ -42,12 +42,12 @@ body::before {
 }
 
 a {
-  color: #04130b;
+  color: #c6cdcf;
   text-decoration: none;
 }
 
 a:hover {
-  color: #06110b;
+  color: #35e888;
   text-decoration: none;
 }
 
@@ -55,30 +55,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
-
-@-webkit-keyframes blink {
-  0% {
-    opacity: 0.1;
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.1;
-  }
-}
-
-@keyframes blink {
-  0% {
-    opacity: 0.1;
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.1;
-  }
-}
 
 /*--------------------------------------------------------------
 # Header
@@ -100,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   line-height: 1;
-  font-weight: 600;
+  font-weight: 500;
   font-family: "Poppins", sans-serif;
 }
 #header h1 a, #header h1 a:hover {
@@ -115,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #header h2 span {
   color: #fff;
-  border-bottom: 2px solid#0bb88f;
+  border-bottom: 2px solid #c6cdcf;
   padding-bottom: 6px;
 }
 #header img {
@@ -131,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(4, 152, 211, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: #fff;
   line-height: 1;
   margin-right: 8px;
@@ -140,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 40px;
 }
 #header .social-links a:hover {
-  background:#0bb88f;
+  background: #c6cdcf;
 }
 @media (max-width: 992px) {
   #header h1 {
@@ -162,15 +138,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Header Top */
 #header.header-top {
-  height: 80px;
+  height: 60px;
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
-  backdrop-filter: blur(40px); /* Apply blur for frosted glass effect */
-  z-index: 9999; /* Ensure the header stays on top of other elements */
+  background: rgba(31, 28, 28, 0.87);
 }
-
 #header.header-top .social-links, #header.header-top h2 {
   display: none;
 }
@@ -241,7 +215,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color:#0bb88f;
+  background-color: #c6cdcf;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -285,7 +259,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   left: 0;
   bottom: 0;
-  /* background: rgba(4, 135, 211, 0.9); */
+  background: rgba(0, 0, 0, 0.9);
   transition: 0.3s;
   z-index: 999;
   margin-top: 0;
@@ -331,11 +305,6 @@ section {
   transition: ease-in-out 0.4s;
   z-index: 2;
 }
-
-.rounded-image {
-  border-radius: 10px;
-}
-
 section.section-show {
   top: 100px;
   bottom: auto;
@@ -343,11 +312,17 @@ section.section-show {
   padding-bottom: 45px;
 }
 section .container {
-  background: rgba(255, 255, 255, 0.1); /* Light semi-transparent background */
-  backdrop-filter: blur(10px); /* Apply blur for the frosted glass effect */
+  background: rgba(255, 255, 255, 0.1); /* Light transparent background */
   padding: 30px;
-  border-radius: 10px; /* Optional: round corners for a smoother glass effect */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: border to enhance glassy look */
+  border-radius: 10px; /* Optional: rounded corners for a modern look */
+  margin: 0 auto; /* Ensures equal margins left and right */
+  width: calc(100% - 30px); /* Adds responsive spacing */
+  max-width: 1200px; /* Optional: restricts the container's width */
 }
+
 
 @media (max-width: 768px) {
   section {
@@ -374,7 +349,7 @@ section .container {
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: #07aadb;
+  background: #4ceb95;
   margin: 4px 10px;
 }
 .section-title p {
@@ -386,26 +361,6 @@ section .container {
   font-family: "Poppins", sans-serif;
   color: #fff;
 }
-/* Add this to ensure padding and borders are included in the element's total width */
-section {
-  box-sizing: border-box; /* Include padding and border in the element's total width */
-}
-
-/* For small devices */
-@media (max-width: 768px) {
-  section {
-    top: 120px;
-    margin-left: auto; /* Center the section horizontally */
-    margin-right: auto; /* Center the section horizontally */
-    margin-left: 10px; /* Ensure equal margin from left */
-    margin-right: 10px; /* Ensure equal margin from right */
-    width: calc(100% - 20px); /* Adjust width to accommodate the margin */
-  }
-  section.section-show {
-    top: 80px;
-  }
-}
-
 
 /*--------------------------------------------------------------
 # About
@@ -413,7 +368,7 @@ section {
 .about-me .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color:#ffffff;
+  color: #c6cdcf;
 }
 .about-me .content ul {
   list-style: none;
@@ -430,27 +385,9 @@ section {
 .about-me .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color:#0bb88f;
+  color: #c6cdcf;
   line-height: 0;
 }
 .about-me .content p:last-child {
   margin-bottom: 0;
-}
-
-
-@-webkit-keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
